@@ -1,6 +1,6 @@
 # TLADS - Think Like a Data Scientist
 
-![Data Science Workshop](./tlads_ipynb/future-city.webp)
+![Data Science Workshop](./images/tlads_ipynb/future-city.webp)
 
 ## Overview
 
