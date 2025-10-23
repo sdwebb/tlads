@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  tlads-workshop:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    ports:
+      - "8888:8888"  # Jupyter
+      - "8050:8050"  # Dash
+      - "5000:5000"  # Flask/Development
+    volumes:
+      - .:/workspace
+      - jupyter-data:/home/vscode/.jupyter
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    command: >
+      bash -c "
+        pip install -r requirements.txt &&
+        jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''
+      "
+
+volumes:
+  jupyter-data:
