@@ -102,16 +102,6 @@ docker-compose up
    jupyter notebook tlads_ipynb/tlads_nb.ipynb
    ```
 
-### Option 4: Try the Sample Dash App
-
-Once your environment is set up, you can run the sample dashboard:
-
-```bash
-python dash_app.py
-```
-
-Then visit `http://localhost:8050` to see an interactive dashboard example.
-
 ## Key Python Libraries Used
 
 - **pandas** (~2.2.3): Data manipulation and analysis
